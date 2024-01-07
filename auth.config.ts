@@ -12,7 +12,9 @@ export const authConfig = {
         if (isLoggedIn) return true;
         return false; // Redirect unauthenticated users to login page
       } else if (isLoggedIn) {
-        return Response.redirect(new URL('/dashboard', nextUrl));
+        let t = Response.redirect(new URL('/dashboard', nextUrl));
+        console.log(t);
+        return t;
       }
       return true;
     },
